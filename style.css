@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+
+    /* Primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* Neutral */
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+    background-color: var(--Very-Light-Gray);
+    color: var(--Very-Dark-Blue);
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    margin: 80px auto 50px;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 36px;
+    margin: 0;
+    line-height: 3.4rem;
+}
+
+h1 span {
+    font-weight: 600;
+}
+
+p {
+    color: var(--Grayish-Blue);
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1140px;
+    max-height: 600px;
+}
+
+.box {
+    background-color: white;
+    box-shadow: 0px 10px 15px 0px rgba(110, 160, 195, 0.175);
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    width: 350px;
+    height: 250px;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+}
+
+.box-red::after {
+    background-color: var(--Red);
+}
+
+.box-cyan::after {
+    background-color: var(--Cyan);
+}
+
+.box-orange::after {
+    background-color: var(--Orange);
+}
+
+.box-blue::after {
+    background-color: var(--Blue);
+}
+
+.box-push {
+    margin-top: 155px;
+}
+
+.box h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.box p {
+    font-size: 13px;
+    margin: 10px 0 40px;
+}
+
+.box img {
+    display: block;
+    margin-left: auto;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1140px) {
+    .box-push {
+        margin-top: 15px;
+    }
+    .container {
+        flex-direction: row;
+        max-height: none;
+    }
+}
+
+@media (max-width: 790px) {
+    header {
+        max-width: 320px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+
